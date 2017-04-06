@@ -12,11 +12,11 @@ alias - "cd -"
 # shortcuts
 alias dt "cd ~/Desktop"
 alias dl "cd ~/Downloads"
-alias p "cd ~/Projects"
-alias f "cd ~/Projects/fathom"
+alias w "cd ~/Work"
+alias af "cd ~/Work/af-frontend"
 
 # listings
-alias l "ls -laF"
+alias ll "ls -laF"
 
 # git
 alias gs "git status -s"
