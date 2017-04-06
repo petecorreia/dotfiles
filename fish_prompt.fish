@@ -18,21 +18,43 @@ end
 function _root_segment
 	set -l uid (id -u $USER)
 	if test $uid -eq 0
-		_segment red "⚡︎"
+		_segment red "◇"
 	end
 end
 
 function _path_segment
-	_segment cyan (prompt_pwd)
+	_segment magenta (prompt_pwd)
+end
+
+function _git_upstream_configured
+	git rev-parse --abbrev-ref @"{u}" > /dev/null 2>&1
+end
+
+function _git_behind_upstream
+	test (git rev-list --right-only --count HEAD...@"{u}" ^ /dev/null) -gt 0
+end
+
+function _git_ahead_of_upstream
+	test (git rev-list --left-only --count HEAD...@"{u}" ^ /dev/null) -gt 0
 end
 
 function _git_segment
 	if test (_git_branch_name)
 		set -l git_branch (_git_branch_name)
-		_segment blue $git_branch
+		_segment white $git_branch
 
 		if test (_is_git_dirty)
-			_segment yellow "±"
+			_segment yellow "☉"
+		end
+	end
+
+	if _git_upstream_configured
+		if _git_behind_upstream
+			_segment yellow "▽"
+		end
+
+		if _git_ahead_of_upstream
+			_segment yellow "△"
 		end
 	end
 end
@@ -42,11 +64,11 @@ function _prompt_segment
 		set_color green
 	else
 		set_color red
-		echo -n "→ $last_status"
 	end
 
 	echo ""
-	echo -n "› "
+	echo -n "▷ "
+	echo -n " "
 end
 
 function fish_prompt
