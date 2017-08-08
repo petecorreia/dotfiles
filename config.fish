@@ -7,7 +7,6 @@ alias .. "cd .."
 alias ... "cd ../.."
 alias .... "cd ../../.."
 alias ..... "cd ../../../.."
-alias - "cd -"
 
 # shortcuts
 alias dt "cd ~/Desktop"
@@ -34,6 +33,8 @@ alias hide "defaults write com.apple.finder AppleShowAllFiles -bool false and ki
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true and killall Finder"
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false and killall Finder"
 
+set -gx PATH ~/Library/Python/3.4/bin $PATH
+
 
 ############################################
 # FUNCTIONS
@@ -43,3 +44,7 @@ alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false and
 function mkd
 	mkdir -p $argv; and cd $argv
 end
+
+source ~/.config/fish/nvm-wrapper/nvm.fish
+
+ssh-add -K ~/.ssh/id_rsa
