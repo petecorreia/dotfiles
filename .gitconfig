@@ -22,10 +22,11 @@
 	la = "!git config -l | grep alias | cut -c 7-"
 	diff = diff --word-diff
 	url =! bash -c 'git config --get remote.origin.url | sed -E "s/.+:\\(.+\\)\\.git$/https:\\\\/\\\\/github\\\\.com\\\\/\\\\1/g"'
-	urlb =! bash -c 'git url | sed -E "s/\\(.+\\)/\\\\1\\\\/tree\\\\/`git rev-parse --abbrev-ref HEAD`/"'
+	branch-name-clean =! bash -c 'git rev-parse --abbrev-ref HEAD | sed -E "s/\\\\//\\\\\\\\\\\\//g"'
+	urlb =! bash -c 'git url | sed -E "s/\\(.+\\)/\\\\1\\\\/tree\\\\/`git branch-name-clean`/"'
 	hub =! bash -c 'git url | xargs open'
 	hubb =! bash -c 'git urlb | xargs open'
-	pr =! bash -c 'git url | sed -E "s/\\(.+\\)/\\\\1\\\\/compare\\\\/`git rev-parse --abbrev-ref HEAD`?expand=1/" | xargs open'
+	pr =! bash -c 'git url | sed -E "s/\\(.+\\)/\\\\1\\\\/compare\\\\/`git branch-name-clean`?expand=1/" | xargs open'
 	cleanup =! bash -c 'git branch --merged master | grep -v \"\\* master\" | xargs -n 1 git branch -d'
 	cleanup-develop =! bash -c 'git branch --merged develop | grep -v \"\\* develop\" | xargs -n 1 git branch -d'
 [push]
