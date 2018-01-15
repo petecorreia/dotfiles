@@ -6,7 +6,7 @@
 	email = pete@petecorreia.com
 
 [core]
-	editor = subl -n -w
+	editor = code --wait
 	excludesfile = /Users/petecorreia/.gitignore_global
 	autocrlf = input
 [alias]
