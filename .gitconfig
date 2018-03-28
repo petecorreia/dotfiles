@@ -11,7 +11,8 @@
 	autocrlf = input
 [alias]
 	st = status
-	ci = commit
+	cm = commit -m
+	ca = commit -a -m
 	co = checkout
 	br = branch
 	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
@@ -29,5 +30,7 @@
 	pr =! bash -c 'git url | sed -E "s/\\(.+\\)/\\\\1\\\\/compare\\\\/`git branch-name-clean`?expand=1/" | xargs open'
 	cleanup =! bash -c 'git branch --merged master | grep -v \"\\* master\" | xargs -n 1 git branch -d'
 	cleanup-develop =! bash -c 'git branch --merged develop | grep -v \"\\* develop\" | xargs -n 1 git branch -d'
+	branch-name = "!git rev-parse --abbrev-ref HEAD"
+	publish = "!git push -u origin $(git branch-name)"
 [push]
 	default = simple
