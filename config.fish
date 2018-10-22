@@ -33,18 +33,8 @@ alias hide "defaults write com.apple.finder AppleShowAllFiles -bool false and ki
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true and killall Finder"
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false and killall Finder"
 
-set -gx PATH ~/Library/Python/3.4/bin $PATH
-
-
-############################################
-# FUNCTIONS
-############################################
-
-# create a new directory and cd into it
-function mkd
-	mkdir -p $argv; and cd $argv
-end
-
-source ~/.config/fish/nvm-wrapper/nvm.fish
+set PATH ~/Library/Python/3.7/bin $PATH
 
 ssh-add -K ~/.ssh/id_rsa
+
+node -v
