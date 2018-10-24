@@ -1,4 +1,5 @@
 # dotfiles
+
 All things setup.
 
 ```bash
@@ -9,6 +10,5 @@ cd dotfiles
 
 Other things:
 
-- Install Fira Code font
-- Setup Fira Code font in iTerm
-- Setup dracula theme in iTerm
+- Install Dank Mono font
+- Setup Dank Mono font in iTerm

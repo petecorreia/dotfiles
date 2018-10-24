@@ -18,6 +18,7 @@ brew install fish
 brew install git
 brew install node
 brew install ruby
+brew install python3
 
 # install other useful things
 brew install tree
@@ -43,12 +44,11 @@ chsh -s /usr/local/bin/fish
 curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisher
 
 # install z
-fisher z
+fisher add jethrokuan/z
+fisher add FabioAntunes/fish-nvm
 
-# install dracula iterm theme
-mkdir -p ~/.config/iterm
-curl https://raw.githubusercontent.com/dracula/iterm/master/Dracula.itermcolors > ~/.config/iterm/Dracula.itermcolors
-open ~/.config/iterm/Dracula.itermcolors
+# install iterm theme
+open "$(pwd)/iterm.itermcolors"
 
 # finally symlink everything
 ln -fs "$(pwd)/.editorconfig" ~/.editorconfig
