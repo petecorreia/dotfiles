@@ -33,8 +33,6 @@ alias hide "defaults write com.apple.finder AppleShowAllFiles -bool false and ki
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true and killall Finder"
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false and killall Finder"
 
-set PATH ~/Library/Python/3.7/bin $PATH
-
 ssh-add -K ~/.ssh/id_rsa
 
 node -v
