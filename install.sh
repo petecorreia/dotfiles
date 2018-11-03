@@ -18,7 +18,9 @@ brew install fish
 brew install git
 brew install node
 brew install ruby
+brew install gcc
 brew install python3
+brew install yarn
 
 # install other useful things
 brew install tree
@@ -36,6 +38,9 @@ grep -q /usr/local/bin/fish /etc/shells
 if [ $? -ne 0 ]; then
 	echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
 fi
+
+# install nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 
 # change current shell to fish
 chsh -s /usr/local/bin/fish
