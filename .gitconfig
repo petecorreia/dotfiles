@@ -12,7 +12,7 @@
 [alias]
 	st = status
 	cm = commit -a -m
-	cmp = "!f() { git commit -a -m \"$@\" && git push; }; f"
+	cmp = "!f() { git add . && git commit -m \"$@\" && git push; }; f"
 	ca = commit -a -m
 	co = checkout
 	br = branch
