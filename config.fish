@@ -8,31 +8,25 @@ alias ... "cd ../.."
 alias .... "cd ../../.."
 alias ..... "cd ../../../.."
 
-# shortcuts
-alias dt "cd ~/Desktop"
-alias dl "cd ~/Downloads"
-alias w "cd ~/Work"
-alias af "cd ~/Work/af-frontend"
-
 # listings
 alias ll "ls -laF"
-
-# git
-alias gs "git status -s"
-alias ga "git add"
-alias gc "git commit"
 
 # enable aliases to be sudo’ed
 alias sudo "sudo "
 
-# show/hide hidden files in Finder
-alias show "defaults write com.apple.finder AppleShowAllFiles -bool true and killall Finder"
-alias hide "defaults write com.apple.finder AppleShowAllFiles -bool false and killall Finder"
+# ssh-add -K ~/.ssh/id_rsa
 
-# show/hide desktop (useful when presenting)
-alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true and killall Finder"
-alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false and killall Finder"
+# node -v
 
-ssh-add -K ~/.ssh/id_rsa
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/petecorreia/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/petecorreia/Downloads/google-cloud-sdk/path.fish.inc'; end
 
-node -v
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish ]; and . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish ]; and . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.fish ]; and . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.fish
