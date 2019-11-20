@@ -14,12 +14,11 @@ alias ll "ls -laF"
 # enable aliases to be sudo’ed
 alias sudo "sudo "
 
-# ssh-add -K ~/.ssh/id_rsa
+# add ssh keys
+ssh-add -K ~/.ssh/id_rsa > /dev/null 2>&1
+ssh-add -K ~/.ssh/id_rsa_appital > /dev/null 2>&1
 
 # node -v
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/petecorreia/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/petecorreia/Downloads/google-cloud-sdk/path.fish.inc'; end
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
@@ -30,3 +29,11 @@ if [ -f '/Users/petecorreia/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Use
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.fish ]; and . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.fish
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/petecorreia/google-cloud-sdk/path.fish.inc' ]; . '/Users/petecorreia/google-cloud-sdk/path.fish.inc'; end
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+eval /usr/local/Caskroom/miniconda/base/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<
+
