@@ -29,9 +29,9 @@
 	hub =! bash -c 'git url | xargs open'
 	hubb =! bash -c 'git urlb | xargs open'
 	pr =! bash -c 'git url | sed -E "s/\\(.+\\)/\\\\1\\\\/compare\\\\/`git branch-name-clean`?expand=1/" | xargs open'
-	cleanup =! bash -c 'git branch --merged master | grep -v \"\\* master\" | xargs -n 1 git branch -d'
+	cleanup =! bash -c 'git branch --merged main | grep -v \"\\* main\" | xargs -n 1 git branch -d'
 	cleanup-develop =! bash -c 'git branch --merged develop | grep -v \"\\* develop\" | xargs -n 1 git branch -d'
-	cleanup-hard =! bash -c 'git branch | grep -v \"\\* master\" | xargs -n 1 git branch -D'
+	cleanup-hard =! bash -c 'git branch | grep -v \"\\* main\" | xargs -n 1 git branch -D'
 	branch-name = "!git rev-parse --abbrev-ref HEAD"
 	publish = "!git push -u origin $(git branch-name)"
 [push]
