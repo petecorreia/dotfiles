@@ -14,13 +14,7 @@ brew update
 brew upgrade
 
 # install basics stuff
-brew install fish
-brew install git
-brew install node
-brew install ruby
-brew install gcc
-brew install python3
-brew install tree
+brew install fish git go adr-tools kustomize postgresql sqlc gcc golang-migrate pulumi python3 node ruby tree
 brew cleanup
 
 ############################################
