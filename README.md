@@ -12,7 +12,7 @@ After it install, open a new term tab and:
 
 ```bash
 # theme
-fisher add rafaelrinaldi/pure
+fisher install rafaelrinaldi/pure
 ```
 
 Other things:
