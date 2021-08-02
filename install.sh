@@ -5,7 +5,7 @@
 ############################################
 
 # install homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # make sure we’re using the latest homebrew
 brew update
@@ -22,13 +22,13 @@ brew cleanup
 ############################################
 
 # add fish to the list of acceptable shells (if not already present)
-grep -q /usr/local/bin/fish /etc/shells
+grep -q /opt/homebrew/bin/fish /etc/shells
 if [ $? -ne 0 ]; then
-	echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
+	echo "/opt/homebrew/bin/fish" | sudo tee -a /etc/shells
 fi
 
 # change current shell to fish
-chsh -s /usr/local/bin/fish
+chsh -s /opt/homebrew/bin/fish
 
 # install fisher
 curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisher
