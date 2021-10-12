@@ -1,21 +1,10 @@
 # dotfiles
 
-All things setup.
+Simplified to use in Github Codespaces.
 
-```bash
-git clone https://github.com/petecorreia/dotfiles.git
-cd dotfiles
-./install.sh
-```
-
-After it install, open a new term tab and:
-
-```bash
-# theme
-fisher install rafaelrinaldi/pure
-```
+See other branches for intel and m1.
 
 Other things:
 
--   Install Dank Mono font
--   Setup Dank Mono font in iTerm
+- Install Dank Mono font
+- Setup Dank Mono font in iTerm
