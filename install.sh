@@ -8,9 +8,6 @@ curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
 # install zsh
 brew install zsh
 
-# change shell to zsh
-chsh -s /bin/zsh
-
 # install oh my zsh
 curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 
@@ -32,4 +29,4 @@ ln -nfs "$HOME/dotfiles/.gitignore"  "$HOME/.gitignore"
 ln -nfs "$HOME/dotfiles/.hushlogin"  "$HOME/.hushlogin"
 ln -nfs "$HOME/dotfiles/.zshrc"  "$HOME/.zshrc"
 
-zsh
+echo "zsh installed, run: chsh -s /bin/zsh"

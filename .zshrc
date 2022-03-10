@@ -7,7 +7,20 @@ export ZSH=$HOME/.oh-my-zsh
 # Disable theme as we'll use "pure"
 ZSH_THEME=""
 
-plugins=(git docker docker-compose gcloud golang kubectl npm nvm terraform zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting)
+plugins=(
+	git
+	docker
+	docker-compose
+	gcloud
+	golang
+	kubectl
+	npm
+	nvm
+	terraform
+	zsh-autosuggestions
+	zsh-history-substring-search
+	zsh-syntax-highlighting
+)
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=white'
 
@@ -50,11 +63,7 @@ export LSCOLORS=exfxcxdxbxegedabagacad
 # load the pure prompt
 autoload -U promptinit; promptinit
 
-# Autocomplete colors
-#
-# Based on OhMyZSH default `LSCOLORS`. Converted with the help of the Geoff
-# Greer's lscolors project.
-# See: https://geoff.greer.fm/lscolors/
+# fix autocomplete colors
 zstyle ':completion:*:default' list-colors \
   "di=34" "ln=35" "so=32" "pi=33" "ex=31" "bd=34;46" "cd=34;43" \
   "su=30;41" "sg=30;46" "tw=30;42" "ow=30;43"
