@@ -60,6 +60,9 @@ alias "ll"="ls -la"
 
 export LSCOLORS=exfxcxdxbxegedabagacad
 
+# fix pure on m1 mac
+fpath+=/opt/homebrew/share/zsh/site-functions
+
 # load the pure prompt
 autoload -U promptinit; promptinit
 
