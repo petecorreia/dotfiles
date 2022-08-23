@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/go/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -57,6 +57,7 @@ alias "..."="cd ../.."
 alias "...."="cd ../../.."
 alias "....."="cd ../../../.."
 alias "ll"="ls -la"
+alias "code"="code-insiders"
 
 export LSCOLORS=exfxcxdxbxegedabagacad
 
@@ -72,3 +73,9 @@ zstyle ':completion:*:default' list-colors \
   "su=30;41" "sg=30;46" "tw=30;42" "ow=30;43"
 
 prompt pure
+
+export EDITOR="code-insiders -w"
+
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
+export USE_GKE_GCLOUD_AUTH_PLUGIN="True"
