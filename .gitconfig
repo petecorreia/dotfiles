@@ -6,7 +6,7 @@
 	email = pete@petecorreia.com
 
 [core]
-	editor = code --wait
+	editor = windsurf -w
 	excludesfile = /Users/petecorreia/.gitignore_global
 	autocrlf = input
 [alias]
@@ -36,7 +36,12 @@
 	publish = "!git push -u origin $(git branch-name)"
 [push]
 	default = simple
+	autoSetupRemote = true
 [diff "sopsdiffer"]
 	textconv = sops -d
 [pull]
 	rebase = false
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[init]
+	defaultBranch = main
