@@ -6,7 +6,7 @@
 	email = pete@petecorreia.com
 
 [core]
-	editor = windsurf -w
+	editor = cursor -w
 	excludesfile = /Users/petecorreia/.gitignore_global
 	autocrlf = input
 [alias]
